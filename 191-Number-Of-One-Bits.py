@@ -4,7 +4,7 @@ class Solution:
         while n != 0:
             if(n & 1 == 1):
                 bits += 1
-            n = n >> 1
+            n >>= 1
         return bits
 
 # In this solution we look at the bit value of n and just read through that
