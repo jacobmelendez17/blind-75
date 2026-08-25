@@ -1,0 +1,32 @@
+class Solution:
+    def threeSum(self, nums: list[int]) -> list[list[int]]:
+        res = []
+        nums.sort()
+
+        for i in range(len(nums)):
+            if i > 0 and nums[i] == nums[i-1]:
+                continue
+
+            j = i + 1
+            k = len(nums) - 1
+
+            while j < k:
+                total = nums[i] + nums[j] + nums[k]
+
+                if total > 0:
+                    k -= 1
+                elif total < 0:
+                    j += 1
+                else:
+                    res.append([nums[i], nums[j], nums[k]])
+                    j += 1
+
+                    while nums[j] == nums[j-1] and j < k:
+                        j += 1
+        return res
+        
+# We don't want to have three pointers to track for our sum since this will take forever and take up too much point tracking
+# So for every i in our loop, it will represent our first number and the two pointers will point to our potential other numbers
+# We first look ahead and if the indexes match, we'll continue since we don't want duplicate solutions
+# We get our hypothetical total and move the left and right pointers based on aiming towards 1
+# When we find a match we will check for a duplicate again for the same reasons as before
