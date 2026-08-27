@@ -12,6 +12,6 @@ class Solution:
 # In this solution we use a variant of Kadane's Algorithm (finds max subarray sum in array)
 # In our approach, we use dynamic programming to check the best stock
 # We set our buying stock to the first element
-# For every element we check if tht element is less than our current buy variable which would be most ideal (profitable)
+# For every element we check if that element is less than our current buy variable which would be most ideal (profitable)
 # If it's not we also check if selling that current item with our current buy variable will be most profitable
 # If it's neither we just move on and return the profit

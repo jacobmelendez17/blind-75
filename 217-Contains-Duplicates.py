@@ -1,11 +1,11 @@
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        my_map = {}
+        seen = set()
         for num in nums:
-            if num in my_map:
+            if num in seen:
                 return True
-            my_map[num] = my_map.get(num, 0) + 1
+            seen.add(num)
         return False
         
-# In this solution we use a Hash Set to save every number in the array
-# If it appears the first time, we store it in the Hash Set otherwise we have found a duplicate
+# In this solution we use a set to save every number in the array
+# If it appears the first time, we store it in the set otherwise we have found a duplicate
