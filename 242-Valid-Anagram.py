@@ -12,7 +12,6 @@ class Solution:
                 return False
         return True
 
-
 # In this solution, we will use a frequency array to keep track of character counts in each word
 # ord will provide the ASCII value and if both words contain that letter, it'll eventually zero out
 # We check for zeros in the second for-loop and if everything isn't zero then there isn't an anagram
