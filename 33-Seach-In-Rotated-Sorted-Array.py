@@ -21,4 +21,4 @@ class Solution:
         return -1
 
 # In this approach we use a binary search to find our target in a rotated sorted array
-# The idea here is that we can find our target in the upper or lower half based on our knowledge of the array being sorted
+# In a rotated sorted array, one half of the array is always sorted so we use this logic to determine which half is sorted and if the target is in there
